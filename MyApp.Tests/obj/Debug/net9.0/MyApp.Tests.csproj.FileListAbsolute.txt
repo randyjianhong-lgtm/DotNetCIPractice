@@ -1,0 +1,6 @@
+D:\DotNetCIPractice\MyApp.Tests\obj\Debug\net9.0\MyApp.Tests.csproj.AssemblyReference.cache
+D:\DotNetCIPractice\MyApp.Tests\obj\Debug\net9.0\MyApp.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNetCIPractice\MyApp.Tests\obj\Debug\net9.0\MyApp.Tests.AssemblyInfoInputs.cache
+D:\DotNetCIPractice\MyApp.Tests\obj\Debug\net9.0\MyApp.Tests.AssemblyInfo.cs
+D:\DotNetCIPractice\MyApp.Tests\obj\Debug\net9.0\MyApp.Tests.csproj.CoreCompileInputs.cache
+D:\DotNetCIPractice\MyApp.Tests\obj\Debug\net9.0\MyApp.Tests.sourcelink.json
