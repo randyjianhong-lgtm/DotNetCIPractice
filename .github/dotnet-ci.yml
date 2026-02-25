@@ -1,0 +1,35 @@
+name: .NET CI Pipeline
+
+# 當有程式碼推送到 main 分支，或發起 Pull Request 時觸發
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # 使用最新的 Ubuntu 虛擬機
+
+    steps:
+    # 1. 取得你推送到 GitHub 的程式碼
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # 2. 安裝 .NET 8 環境 (可依需求改為你的專案版本)
+    - name: Setup .NET 8
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    # 3. 還原 NuGet 套件
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # 4. 編譯專案 (Release 模式，並確保不重複執行還原)
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+
+    # 5. 執行單元測試
+    - name: Test
+      run: dotnet test --no-build --verbosity normal --configuration Release
